@@ -1,0 +1,134 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Paciente"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/edtNombre"
+            style="@style/EditTextCursorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre"
+            android:textColorHint="#757575"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:cursorVisible="true"
+            android:layout_marginBottom="10dp"
+            android:background="#F5F5F5"/>
+
+        <EditText
+            android:id="@+id/edtApellido"
+            style="@style/EditTextCursorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Apellido"
+            android:textColorHint="#757575"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:cursorVisible="true"
+            android:layout_marginBottom="10dp"
+            android:background="#F5F5F5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Género"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:padding="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rbMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Masculino"
+                android:textColor="#000000"
+                android:buttonTint="@color/black"
+                android:layout_marginEnd="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rbFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Femenino"
+                android:textColor="#000000"
+                android:buttonTint="@color/black"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edtDireccion"
+            style="@style/EditTextCursorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Dirección"
+            android:textColorHint="#757575"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:cursorVisible="true"
+            android:layout_marginBottom="10dp"
+            android:background="#F5F5F5"/>
+
+        <EditText
+            android:id="@+id/edtEdad"
+            style="@style/EditTextCursorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Edad"
+            android:textColorHint="#757575"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:cursorVisible="true"
+            android:layout_marginBottom="10dp"
+            android:background="#F5F5F5"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            style="@style/EditTextCursorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Teléfono"
+            android:textColorHint="#757575"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:cursorVisible="true"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Agregar"
+            android:textColor="@color/black91"
+            android:padding="12dp"
+            android:background="#4CAF50"/>
+    </LinearLayout>
+</ScrollView>

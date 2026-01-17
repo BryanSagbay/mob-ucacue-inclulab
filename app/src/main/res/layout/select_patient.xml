@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/lg_ofertafond">
+
+    <!-- CardView flotante -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="600dp"
+        android:layout_height="385dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:background="@drawable/btn_rounded">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtNoDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay pacientes registrados"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/btn_rounded"
+            android:textColor="@color/black" />
+
+        <!-- Contenedor Scrolleable -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/btn_rounded"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPacientes"
+                android:layout_width="588dp"
+                android:layout_height="390dp"
+                android:layout_marginTop="9dp"
+                android:scrollbars="vertical" />
+        </ScrollView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <!-- Botón de cancelar -->
+<Button
+android:id="@+id/btnCancelar"
+android:layout_width="600dp"
+android:layout_height="wrap_content"
+
+android:text="Cancelar"
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+android:padding="15dp"
+android:background="@drawable/btn_roundedtest"
+    android:textColor="@color/white"
+    android:layout_marginBottom="90dp" />
+    </RelativeLayout>

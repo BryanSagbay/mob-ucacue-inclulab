@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk tools:overrideLibrary="com.google.android.material"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <!-- <= 30 + Xiaomi/MIUI -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <!-- >= API 31 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- mipmap/ic_launcher created with Android Studio -> New -> Image Asset using @color/colorPrimaryDark as background color -->
+    <application
+        android:icon="@drawable/udipsai"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hasCode="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <!-- Add metadata for assets directories -->
+        <meta-data
+            android:name="android.assets_directories"
+            android:value="assets" />
+
+        <activity
+            android:name=".UI.login.LoginActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Rest of your activities remain unchanged -->
+        <activity
+            android:name=".UI.register.RegisterActivity"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.home.HomePage"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.listpage.ListPatient"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.pdf.Pdf"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+
+        <activity
+            android:name=".UI.patient.PatientHome"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+
+        <!--  Pages of Test -->
+        <activity
+            android:name=".UI.test.HomeTest"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.test.test_Monotonia"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.test.test_Riel"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.test.test_Palanca"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <activity
+            android:name=".UI.test.test_Bennett"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+        <service
+            android:name=".Services.SerialService"
+            android:foregroundServiceType="remoteMessaging|connectedDevice"
+            android:exported="false"/>
+    </application>
+
+</manifest>

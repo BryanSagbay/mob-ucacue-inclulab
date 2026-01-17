@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerInParent="true"
+android:orientation="vertical"
+android:gravity="center"
+android:background="@color/white"
+android:padding="24dp"
+android:elevation="10dp">
+
+<ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@android:drawable/ic_delete"
+    android:layout_gravity="center"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="¿Deseas eliminar este paciente?"
+    android:textColor="#000000"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:padding="10dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Esta acción no se puede deshacer"
+    android:textColor="#757575"
+    android:textSize="14sp"
+    android:gravity="center"
+    android:paddingBottom="10dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnCancelarEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:padding="10dp"
+        android:backgroundTint="#757575"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnConfirmarEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:padding="10dp"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white"/>
+</LinearLayout>
+</LinearLayout>

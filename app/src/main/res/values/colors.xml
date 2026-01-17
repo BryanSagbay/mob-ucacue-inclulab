@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000DD</color>
+    <color name="colorPrimaryDark">#000000DD</color>
+    <color name="colorAccent">#000000DD</color>
+
+    <!--Login-->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#707070</color>
+    <color name="primary">#3F51B5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#2196F3</color>
+    <color name="gray">#BDBDBD</color>
+    <!--End-Login-->
+
+    <color name="black89">#000000DD</color>
+    <color name="black90">#000000DD</color>
+    <color name="red89">#680303</color>
+    <color name="black">#000000</color>
+    <color name="white80">#99FFFFFF</color>
+    <color name="yellow20">#FFEB3B</color>
+    <color name="bluedark">#0023FF</color>
+    <color name="greendark">#1E6A1F</color>
+    <color name="black91">#242323</color>
+    <color name="white90">#809B9B9B</color>
+
+    <!-- En res/values/colors.xml -->
+    <color name="accent_color">#5D9CEC</color>
+    <color name="text_primary">#37474F</color>
+    <color name="control_normal">#78909C</color>
+    <color name="card_background">#FFFFFF</color>
+
+
+    <color name="colorRecieveText">#00FF00</color>
+    <color name="colorSendText">#82CAFF</color>
+    <color name="colorStatusText">#FFDB58</color>
+</resources>
+

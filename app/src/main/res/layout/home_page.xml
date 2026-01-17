@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Navbar -->
+    <include layout="@layout/navbar_home"/>
+
+    <!-- Contenido principal con imagen de fondo y águila -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lg_fondo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/eagleImage"
+                android:layout_width="650dp"
+                android:layout_height="350dp"
+                android:src="@drawable/lg_aguila"
+                android:scaleType="fitCenter"
+                android:alpha="0"
+                android:translationX="-500dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/universityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Universidad Católica \n           de Cuenca"
+                    android:textSize="50sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:alpha="0"
+                    android:translationX="300dp"/> <!-- Inicia fuera de la pantalla -->
+
+                <TextView
+                    android:id="@+id/mottoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="     〉Sé un águila roja〈"
+                    android:textSize="40sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:alpha="0"
+                    android:translationX="300dp"/> <!-- Inicia fuera de la pantalla -->
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Footer -->
+    <include layout="@layout/footer_home"/>
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Navbar -->
+    <include layout="@layout/navbar_test"/>
+
+    <!-- Fondo de pantalla -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lg_ofertafond"
+            android:clickable="false"
+            android:focusable="false"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="717dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tarjeta del Paciente -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_testview"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/patientInfoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PACIENTE SELECCIONADO:"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/patientName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Paciente"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Animación del águila -->
+            <ImageView
+                android:id="@+id/eagleImage"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:alpha="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lg_aguila"
+                android:translationY="-25dp" />
+
+            <!-- Contenedor de los botones (2 columnas x 2 filas) -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <!-- Test Monotonía -->
+                <LinearLayout
+                    android:id="@+id/btnMonotonia"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:elevation="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingStart="105dp"
+                        android:text="Test de Monotonía"
+                        android:textColor="@android:color/black"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:layout_width="195dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0"
+                        android:paddingStart="15dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/test_monotonia" />
+                </LinearLayout>
+
+                <!-- Test Riel -->
+                <LinearLayout
+                    android:id="@+id/btnRiel"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:elevation="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="105dp"
+                        android:text="Sistema de Motricidad"
+                        android:textColor="@android:color/black"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:layout_width="195dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0"
+                        android:paddingStart="15dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/test_riel" />
+                </LinearLayout>
+
+                <!-- Test Palanca -->
+                <LinearLayout
+                    android:id="@+id/btnPalanca"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:elevation="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="105dp"
+                        android:text="Test de Palanca"
+                        android:textColor="@android:color/black"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:layout_width="195dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0"
+                        android:paddingStart="35dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/test_palanca" />
+                </LinearLayout>
+
+                <!-- Test Bennett -->
+                <LinearLayout
+                    android:id="@+id/btnBennett"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_rounded"
+                    android:elevation="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="105dp"
+                        android:text="Test de Bennett"
+                        android:textColor="@android:color/black"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:layout_width="241dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0"
+                        android:paddingStart="75dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/test_bennett" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- Spinner de carga - Agregado como overlay sobre toda la UI -->
+        <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_rounded"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/loadingGif"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Conectando..."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

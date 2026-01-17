@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/black89"
+    android:elevation="8dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="7dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Icono de regreso (Alineado a la izquierda) -->
+    <ImageButton
+        android:id="@+id/button_regresarH"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Regresar"
+        android:padding="6dp"
+        android:src="@android:drawable/ic_menu_revert"/>
+
+    <!-- Espaciador para empujar las imágenes a la derecha -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <!-- Contenedor de imágenes alineadas a la derecha -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        >
+
+        <!-- Logo izquierdo -->
+        <ImageView
+            android:id="@+id/logoLeft"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:src="@drawable/lg_ucacuelogo"
+            android:scaleType="fitEnd"/>
+
+        <!-- Espaciado pequeño entre logos -->
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Logo derecho -->
+        <ImageView
+            android:id="@+id/logoRight"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/lg_udipsai"/>
+
+    </LinearLayout>
+
+</LinearLayout>

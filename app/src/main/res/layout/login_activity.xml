@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <!-- Contenedor Scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:src="@drawable/lg_inclulab_provisional"
+                android:contentDescription="Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido, Iniciar sesión"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp" />
+
+            <!-- Campo Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/EditTextCursorStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@android:drawable/ic_menu_send"
+                android:drawablePadding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black" />
+
+            <!-- Campo Contraseña -->
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/EditTextCursorStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:drawableStart="@android:drawable/ic_secure"
+                android:drawablePadding="25dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black" />
+
+            <!-- Botón Iniciar Sesión -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Sesión"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:layout_marginTop="20dp" />
+
+            <!-- Línea divisoria -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="20dp" />
+
+            <!-- Registrarse -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿No tienes cuenta? "
+                    android:textColor="@color/gray_dark" />
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regístrate ahora"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Imagen UCACUE -->
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="130dp"
+                android:src="@drawable/lg_ucacue"
+                android:layout_marginTop="20dp"
+                android:contentDescription="UCACUE Logo" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Spinner de carga: Ahora cubre toda la pantalla -->
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <!-- Contenedor que permitirá centrar el spinner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_rounded"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/loadingGif"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Iniciando sesión..."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- Alerta de Error -->
+    <FrameLayout
+        android:id="@+id/errorOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <!-- Contenedor que permitirá centrar el spinner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_rounded"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/errorloadingGif"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Error..."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

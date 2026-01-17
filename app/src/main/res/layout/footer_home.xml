@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/black89"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- Pacientes -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iconPacientes"
+            android:layout_width="450dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_paciente"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/textPacientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pacientes"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Test -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iconTest"
+            android:layout_width="450dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_test"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/textTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Soporte TI -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iconPdf"
+            android:layout_width="450dp"
+            android:layout_height="39dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pdf"
+            android:tint="#FFFF" />
+
+        <TextView
+            android:id="@+id/textSoporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reportes"
+            android:paddingTop="3dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
